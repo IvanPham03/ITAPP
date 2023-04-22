@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\T\\source\\repos\\ITScheduel\\GUI.csproj": {}
+    "C:\\Users\\T\\Desktop\\ITScheduel\\GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\T\\source\\repos\\BUS\\BUS.csproj": {
+    "C:\\Users\\T\\Desktop\\BUS\\BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\T\\source\\repos\\BUS\\BUS.csproj",
+        "projectUniqueName": "C:\\Users\\T\\Desktop\\BUS\\BUS.csproj",
         "projectName": "BUS",
-        "projectPath": "C:\\Users\\T\\source\\repos\\BUS\\BUS.csproj",
+        "projectPath": "C:\\Users\\T\\Desktop\\BUS\\BUS.csproj",
         "packagesPath": "C:\\Users\\T\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\T\\source\\repos\\BUS\\obj\\",
+        "outputPath": "C:\\Users\\T\\Desktop\\BUS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\T\\source\\repos\\DAO\\DAO.csproj": {
-                "projectPath": "C:\\Users\\T\\source\\repos\\DAO\\DAO.csproj"
+              "C:\\Users\\T\\Desktop\\DAO\\DAO.csproj": {
+                "projectPath": "C:\\Users\\T\\Desktop\\DAO\\DAO.csproj"
               },
-              "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj"
+              "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\T\\source\\repos\\DAO\\DAO.csproj": {
+    "C:\\Users\\T\\Desktop\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\T\\source\\repos\\DAO\\DAO.csproj",
+        "projectUniqueName": "C:\\Users\\T\\Desktop\\DAO\\DAO.csproj",
         "projectName": "DAO",
-        "projectPath": "C:\\Users\\T\\source\\repos\\DAO\\DAO.csproj",
+        "projectPath": "C:\\Users\\T\\Desktop\\DAO\\DAO.csproj",
         "packagesPath": "C:\\Users\\T\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\T\\source\\repos\\DAO\\obj\\",
+        "outputPath": "C:\\Users\\T\\Desktop\\DAO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,8 +96,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj"
+              "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj": {
+    "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\T\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\T\\source\\repos\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\T\\Desktop\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -202,14 +202,14 @@
         }
       }
     },
-    "C:\\Users\\T\\source\\repos\\ITScheduel\\GUI.csproj": {
+    "C:\\Users\\T\\Desktop\\ITScheduel\\GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\T\\source\\repos\\ITScheduel\\GUI.csproj",
+        "projectUniqueName": "C:\\Users\\T\\Desktop\\ITScheduel\\GUI.csproj",
         "projectName": "GUI",
-        "projectPath": "C:\\Users\\T\\source\\repos\\ITScheduel\\GUI.csproj",
+        "projectPath": "C:\\Users\\T\\Desktop\\ITScheduel\\GUI.csproj",
         "packagesPath": "C:\\Users\\T\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\T\\source\\repos\\ITScheduel\\obj\\",
+        "outputPath": "C:\\Users\\T\\Desktop\\ITScheduel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -226,8 +226,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\T\\source\\repos\\BUS\\BUS.csproj": {
-                "projectPath": "C:\\Users\\T\\source\\repos\\BUS\\BUS.csproj"
+              "C:\\Users\\T\\Desktop\\BUS\\BUS.csproj": {
+                "projectPath": "C:\\Users\\T\\Desktop\\BUS\\BUS.csproj"
               }
             }
           }

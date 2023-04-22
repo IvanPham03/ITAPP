@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,9 @@ namespace DAO
     public class DataProvider
     {
         // Using this for your string connection
-        private string connectionSTR = @"Data Source=DESKTOP-ELDA9IM;Initial Catalog = IT; Integrated Security = True";
+        private string connectionSTR = @"Data Source=DESKTOP-ELDA9IM;Initial Catalog=SOCCER;Integrated Security=True";
         //Singleton Pattern
+        
         private static DataProvider instance;
 
         public static DataProvider Instance
@@ -67,7 +69,7 @@ namespace DAO
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
-
+         
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
@@ -88,6 +90,7 @@ namespace DAO
                     }
                 }
 
+                /*System.Diagnostics.Debug.WriteLine(command);*/
                 // giá trị này sẽ về mặc định 0-không thành công và 1 - thành công 
                 data = command.ExecuteNonQuery();
 
@@ -106,6 +109,7 @@ namespace DAO
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
+                System.Diagnostics.Debug.WriteLine("success");
 
                 if (parameter != null)
                 {

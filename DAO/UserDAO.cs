@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,8 +30,8 @@ namespace DAO
 
         public string checkLogin(UserDTO user)
         {
-            string rs = (string) DataProvider.Instance.ExecuteScalar("Select username from users where phonenumber = @phonenumber and password = @password", new object[] { user.PHONENUMBER, user.PASSWORD });
-            return rs;
+            return (string) DataProvider.Instance.ExecuteScalar("Select role from users where phonenum = @phonenumber and password = @password", new object[] { user.PHONENUMBER, user.PASSWORD });
+            
         }
     }
 }

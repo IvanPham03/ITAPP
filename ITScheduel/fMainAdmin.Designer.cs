@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMainAdmin));
             panelMenu = new Panel();
+            btnAccount = new Button();
             btnRankTour = new Button();
             btnRankRound = new Button();
             btnParticipate = new Button();
@@ -51,6 +52,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.White;
+            panelMenu.Controls.Add(btnAccount);
             panelMenu.Controls.Add(btnRankTour);
             panelMenu.Controls.Add(btnRankRound);
             panelMenu.Controls.Add(btnParticipate);
@@ -70,6 +72,29 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(363, 1336);
             panelMenu.TabIndex = 0;
+            // 
+            // btnAccount
+            // 
+            btnAccount.Cursor = Cursors.Hand;
+            btnAccount.Dock = DockStyle.Top;
+            btnAccount.FlatAppearance.BorderSize = 0;
+            btnAccount.FlatStyle = FlatStyle.Flat;
+            btnAccount.Font = new Font("Segoe UI Semibold", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAccount.ForeColor = Color.DimGray;
+            btnAccount.Image = (Image)resources.GetObject("btnAccount.Image");
+            btnAccount.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAccount.Location = new Point(0, 965);
+            btnAccount.Margin = new Padding(10, 3, 3, 3);
+            btnAccount.Name = "btnAccount";
+            btnAccount.Padding = new Padding(20, 0, 0, 0);
+            btnAccount.Size = new Size(363, 80);
+            btnAccount.TabIndex = 12;
+            btnAccount.TabStop = false;
+            btnAccount.Text = " Tài khoản";
+            btnAccount.TextAlign = ContentAlignment.MiddleLeft;
+            btnAccount.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAccount.UseVisualStyleBackColor = true;
+            btnAccount.Click += btnAccount_Click;
             // 
             // btnRankTour
             // 
@@ -359,6 +384,7 @@
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1613, 1336);
             panelDesktop.TabIndex = 1;
+            panelDesktop.Paint += panelDesktop_Paint_1;
             // 
             // fMainAdmin
             // 
@@ -400,5 +426,6 @@
         private Button btnParticipate;
         private Button btnMatch;
         private Panel panelDesktop;
+        private Button btnAccount;
     }
 }

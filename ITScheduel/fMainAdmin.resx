@@ -58,6 +58,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAABElJREFUaEPd
+        mq1y3UAMhU0CQkrCQvICeYDAgM4UJDAsDxBaVhiaZyjvI5QWlxYXFpaVhHSmPZ+98siy/LM3mda+mjkz
+        ubJ0Vrsraff6pnn3/vZVILkRvgrPwp8FYIPtTcZ1CFJlLSTXwg8hC3oO+FxnnLVIlTWQnAifhSzQNcD3
+        JOOuQaqsgeRC8LtB2nxbgE8/fC8y7hqkyhpIroRfggX2RTgXzibAM2zMHt+rjLsGqbIGknvht2CBfczs
+        PLBx9vjeZ3Y1SJUGyalA6pxlz4HEBwU+ZHYe2Dh7MDl5CbtIDKfZc0OqBBLaKYX4XSCvCRhdOykJRc5u
+        /BQsIHL/beSKwKbYmh8ccLVFLyF4xmJMxiYGYpls17myae4EH6DBCvmTALGvDUDuv8k4PbAptt4XLjjh
+        jg3BQEx3KedI0RUjRJFkCQyyuBsGbItPxjUHYjsf8Y0UTfNYHAysVFz5CFpodcHiU3wzTkM2/uOIa/Ch
+        aS4FT0xHoTBpsU8CqwEperYeW1Lh4PaJb+GAC064GYOxGJPnxOA7I7aXAx5HSPHGDsR9qO9Y/C1ATCGS
+        GnSTl5/K3dhwwQk3Y8RxicXHRqz92J4MAr+FrE5aWP8DxFJisviIte9iZpR1EbZ7tnf/SxBLicnH2HdJ
+        M3oQfA7STV6S96QJK0jjIAUAf6M7+F4lIeV8pyPmh/IsbbdPkWQNJHARMAeYXxgDOp5hM2qhayChAXjO
+        th0LbYH52mCg6lWTsFqxIOeAbfWuS9htYjQeYmcOo4mwdVVngoRJeHIPdiHbHYBP1WQk8VrUTyRLLR6y
+        /YvFLsE/7gSBo7O6sHpBFyeFbjHNJBQ7HH7RQZdaxYhZRgMGJB9nzwkJ5N7PFmF0Y0ZXnsWxRie1h4Rz
+        hljiIsDTZo83ZtXidWH2LJHEfGWg2aAANsXW/GbrUkJs/gwBxNrHFh2yguVGmqaYhAF8QPhOfncxYFNs
+        zQ+O/FbbpRQxmK2NM6itgVOr6Cbjd4bCGtxrnG1Mq8XdMGDr/CZ9Jdz/fHET26hBDD60ii4f/Qqwpen1
+        XOLvZpOrmgHb4mP+6bdECR3JpxWxjep28KFXHsNEJPtPLQyEfRe7hKD8TgC2dDJdJNtqv5L9H4iS47ii
+        SI7m0hgnMpuvU5BkjWIO2FZNAkgmr/FZau3pi1WbmvZw/191i8FxvHwohvt/HVQMj+MFXXHY/yvTXtEV
+        pTkASH3KZYB4Oy+xW0XejteAbrKdnxVaZVdY2SBsPUSkAjfSuFJ9F5kDNsXW+8IFJ9yM4QvbQEz5LTlT
+        AglFBzEHGMQUF7q2CCUUaLwuMPh2fnozSOjddJPJ7xiS2Om29WPoWkhYSd9Rtvfz9BpIaI++Vsh9GgYr
+        mYFnvj7wPbh9G1JlDSRsu2+h1hDm4OsD34PvX4ZUWQNJfH1UA9IK35ffDjJlLST7/zcng4R2yX0o6/8R
+        2GD7Sv94dtv8BfLHoBONQHsnAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnRankTour.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAB0pJREFUaEOt

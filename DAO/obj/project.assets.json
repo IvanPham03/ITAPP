@@ -2314,11 +2314,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\T\\source\\repos\\DAO\\DAO.csproj",
+      "projectUniqueName": "C:\\Users\\T\\Desktop\\DAO\\DAO.csproj",
       "projectName": "DAO",
-      "projectPath": "C:\\Users\\T\\source\\repos\\DAO\\DAO.csproj",
+      "projectPath": "C:\\Users\\T\\Desktop\\DAO\\DAO.csproj",
       "packagesPath": "C:\\Users\\T\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\T\\source\\repos\\DAO\\obj\\",
+      "outputPath": "C:\\Users\\T\\Desktop\\DAO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\T\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2335,8 +2335,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj"
+            "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj": {
+              "projectPath": "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj"
             }
           }
         }

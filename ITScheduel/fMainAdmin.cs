@@ -1,4 +1,6 @@
-﻿using GUI.Forms;
+﻿using BUS;
+using DTO;
+using GUI.Forms;
 using ITScheduel;
 using System;
 using System.Collections.Generic;
@@ -9,8 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-
 namespace GUI
 {
     public partial class fMainAdmin : Form
@@ -18,6 +18,8 @@ namespace GUI
         private Button currentButton;
         private Form activeForm;
         public static fLogin login = new fLogin();
+        public string strRole;
+        private string permissionRole;
 
         public fMainAdmin()
         {
@@ -27,7 +29,12 @@ namespace GUI
 
         private void fMainAdmin_Load(object sender, EventArgs e)
         {
-
+            permissionRole = strRole;
+        }
+        public string Message
+        {
+            get { return strRole; }
+            set { strRole = value; }
         }
 
 
@@ -63,16 +70,6 @@ namespace GUI
         {
             if (activeForm != null)
                 activeForm.Close();
-            /*
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            *//*childForm.Dock = DockStyle.Fill;*//*
-            this.panelDesktop.Controls.Add(childForm);
-            this.panelDesktop.Tag = childForm;
-            childForm.BringToFront();
-            
-            *//* lblTitle.Text = childForm.Text;*/
             ActivateButton(btnSender);
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -155,6 +152,30 @@ namespace GUI
         {
             this.Close();
             login.Show();
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            if (permissionRole.Equals("admin"))
+            {
+                OpenChildForm(new Forms.fSettingAdmin(), sender);
+            }
+            else
+            {
+                OpenChildForm(new Forms.fSettingOther(), sender);
+            }
+        }
+        // =============load data
+
+
+        private void panelDesktop_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fMainAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

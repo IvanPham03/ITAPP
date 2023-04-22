@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mGcjcHS4zjiuhwvnsMa9Tf26ujOU1OFDCptR5c2m2iP6fmLyI7o2NJeHV+joYX4lIsu9qk88O49qjeBouIniCw==",
+  "dgSpecHash": "7rmGh4bd++gQj3a6jqvgMYl4vlkTPUD1S8fo6jwY0+F4AJVdGFMdUdJiRSYOPnfZBxnMqo3rt08nSPINwPg8uw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\T\\source\\repos\\ITScheduel\\GUI.csproj",
+  "projectFilePath": "C:\\Users\\T\\Desktop\\ITScheduel\\GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\T\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\T\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,8 +1,11 @@
-﻿namespace DTO
+﻿using System.Data;
+
+namespace DTO
 {
     public class UserDTO
     {
-        public string USERID { get; set; }
+        public UserDTO() { }    
+   
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
         public string EMAIL { get; set; }

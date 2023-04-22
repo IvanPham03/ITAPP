@@ -101,7 +101,7 @@
             btnLogin.Location = new Point(560, 438);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(266, 61);
-            btnLogin.TabIndex = 3;
+            btnLogin.TabIndex = 0;
             btnLogin.Tag = "0";
             btnLogin.Text = "Đăng Nhập";
             btnLogin.UseVisualStyleBackColor = false;
@@ -172,6 +172,7 @@
             // 
             // fLogin
             // 
+            AcceptButton = btnLogin;
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Blue;
@@ -182,6 +183,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Tag = "1";
             Text = "Đăng nhập";
+            FormClosing += fLogin_FormClosing;
             Load += fLogin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

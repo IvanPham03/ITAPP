@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3gwUcCYfZN+CsrE9DqZQEIErSukzTZCn1kO9Ej6GoH+hie1S3OdEG0juSu8HdNI/zEIAnsXPqlVQsHIVk8Hvtg==",
+  "dgSpecHash": "QtiNlEDf9DJ+TMM75vyAABmCXYY5N4fM4A3kxcCWzBs6cAi0fMVHoPku03wn0gDyH1Fxf99m98dAq9qHQQgs8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\T\\source\\repos\\DTO\\DTO.csproj",
+  "projectFilePath": "C:\\Users\\T\\Desktop\\DTO\\DTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\T\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\T\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

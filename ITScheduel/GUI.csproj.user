@@ -13,6 +13,12 @@
     <Compile Update="Forms\fParticipant.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\fSettingAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fSettingOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\fTour.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -37,11 +37,11 @@
             textBox2 = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtTeamID = new TextBox();
             label1 = new Label();
             panel1 = new Panel();
             button4 = new Button();
-            button5 = new Button();
+            btnExit = new Button();
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
@@ -71,7 +71,7 @@
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtTeamID);
             groupBox1.Controls.Add(label1);
             groupBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.RoyalBlue;
@@ -148,12 +148,12 @@
             label2.TabIndex = 3;
             label2.Text = "Đội trưởng";
             // 
-            // textBox1
+            // txtTeamID
             // 
-            textBox1.Location = new Point(213, 61);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(337, 36);
-            textBox1.TabIndex = 1;
+            txtTeamID.Location = new Point(213, 61);
+            txtTeamID.Name = "txtTeamID";
+            txtTeamID.Size = new Size(337, 36);
+            txtTeamID.TabIndex = 1;
             // 
             // label1
             // 
@@ -169,7 +169,7 @@
             // panel1
             // 
             panel1.Controls.Add(button4);
-            panel1.Controls.Add(button5);
+            panel1.Controls.Add(btnExit);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(button7);
             panel1.Controls.Add(button8);
@@ -203,24 +203,25 @@
             button4.Text = "     Sao            chép      ";
             button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnExit
             // 
-            button5.BackColor = Color.Transparent;
-            button5.Cursor = Cursors.Hand;
-            button5.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button5.FlatAppearance.BorderSize = 3;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.RoyalBlue;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(1390, 272);
-            button5.Name = "button5";
-            button5.Padding = new Padding(10, 0, 0, 0);
-            button5.Size = new Size(185, 95);
-            button5.TabIndex = 19;
-            button5.Text = "     Thoát";
-            button5.UseVisualStyleBackColor = false;
+            btnExit.BackColor = Color.Transparent;
+            btnExit.Cursor = Cursors.Hand;
+            btnExit.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnExit.FlatAppearance.BorderSize = 3;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.ForeColor = Color.RoyalBlue;
+            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
+            btnExit.ImageAlign = ContentAlignment.MiddleLeft;
+            btnExit.Location = new Point(1390, 272);
+            btnExit.Name = "btnExit";
+            btnExit.Padding = new Padding(10, 0, 0, 0);
+            btnExit.Size = new Size(185, 95);
+            btnExit.TabIndex = 19;
+            btnExit.Text = "     Thoát";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // button6
             // 
@@ -458,7 +459,7 @@
         private Label label3;
         private Label label2;
         private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
+        private TextBox txtTeamID;
         private Label label1;
         private Panel panel1;
         private GroupBox groupBox3;
@@ -472,7 +473,7 @@
         private TextBox textBox4;
         private Label label6;
         private Button button4;
-        private Button button5;
+        private Button btnExit;
         private Button button6;
         private Button button7;
         private Button button8;

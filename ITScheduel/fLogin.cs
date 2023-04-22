@@ -1,8 +1,8 @@
 ﻿using BUS;
-using DAO;
 using DTO;
 using GUI;
 using System.Data;
+using System.Diagnostics;
 
 namespace ITScheduel
 {
@@ -21,10 +21,9 @@ namespace ITScheduel
 
         }
 
-
         private void btnClose(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -38,6 +37,7 @@ namespace ITScheduel
             userDTO.PHONENUMBER = txtPhoneNumber.Text;
             userDTO.PASSWORD = txtPassword.Text;
             string result = (string)UserBus.Instance.Login(userDTO);
+            mainAdmin.Message = result;
             if (!string.IsNullOrEmpty(result))
             {
                 this.Hide();
@@ -71,6 +71,11 @@ namespace ITScheduel
         }
 
         private void fLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }
