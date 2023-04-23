@@ -27,28 +27,27 @@ namespace DAO
         public AccountDAO()
         {
         }
-        /*public DataTable GetListAccount()
+        public DataTable GetListAccount()
         {
-            DataTable table = DataProvider.Instance.ExecuteQuery("EXEC dbo.LoadTour");
+            DataTable table = DataProvider.Instance.ExecuteQuery("EXEC dbo.LoadUser");
             return table;
 
         }
         public int AddAccount(UserDTO userDTO)
         {
-            
+            return DAO.DataProvider.Instance.ExecuteNonQuery("EXEC dbo.InsertUser  @PHONENUM, @USERNAME, @ROLE, @Password", new object[] { userDTO.PHONENUMBER, userDTO.USERNAME, userDTO.ROLE, userDTO.PASSWORD });
         }
         public int SaveAccount(UserDTO userDTO)
         {
-            
+            return DAO.DataProvider.Instance.ExecuteNonQuery("EXEC dbo.UpdateUser @PHONENUM, @USERNAME, @ROLE, @Password", new object[] { userDTO.PHONENUMBER, userDTO.USERNAME, userDTO.ROLE, userDTO.PASSWORD });
         }
         public int DeleteAccount(UserDTO userDTO)
         {
-            return 
+            return DAO.DataProvider.Instance.ExecuteNonQuery("EXEC dbo.DeleteUser @PHONENUM", new object[] { userDTO.PHONENUMBER});
         }
-        public DataTable SearchAccount(UserDTO userDTO)
+        public DataTable SearchAccount(string key)
         {
-
-            return 
-    }*/
+            return DAO.DataProvider.Instance.ExecuteQuery("EXEC dbo.DeleteUser @key", new object[] { key});
+        }
     }
 }

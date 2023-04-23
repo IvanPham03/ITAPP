@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    internal class RegistBus
+    internal class RegistBUS
     {
     }
 }

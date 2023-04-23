@@ -1,5 +1,4 @@
-﻿using BUS;
-using DTO;
+﻿using DTO;
 using GUI.Forms;
 using ITScheduel;
 using System;
@@ -24,7 +23,7 @@ namespace GUI
         public fMainAdmin()
         {
             InitializeComponent();
-            OpenChildForm(new fTour(), btnTournament);
+            OpenChildForm(new fTour(this), btnTournament);
         }
 
         private void fMainAdmin_Load(object sender, EventArgs e)
@@ -79,27 +78,10 @@ namespace GUI
             childForm.BringToFront();
             childForm.Show();
         }
-
-
-
-
-
-        private void btnManageUser_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         //---click
-        private void btnScheduel_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnTour_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.fTour(), sender);
+            OpenChildForm(new Forms.fTour(this), sender);
         }
 
         private void btnTeam_Click(object sender, EventArgs e)
@@ -107,35 +89,10 @@ namespace GUI
             OpenChildForm(new Forms.fTeam(), sender);
         }
 
-        private void btnPLayer_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.fPlayer(), sender);
-        }
-
-        private void btnRegist_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.fRegist(), sender);
-        }
-
-
-        private void btnSchedule_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.fSchedule(), sender);
-        }
 
         private void btnRound_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.fRound(), sender);
-        }
-
-        private void btnMatch_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.fMatch(), sender);
-        }
-
-        private void btnParticipate_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.fParticipant(), sender);
         }
 
         private void btnRankRound_Click(object sender, EventArgs e)
@@ -156,14 +113,14 @@ namespace GUI
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            if (permissionRole.Equals("admin"))
-            {
-                OpenChildForm(new Forms.fSettingAdmin(), sender);
-            }
-            else
-            {
-                OpenChildForm(new Forms.fSettingOther(), sender);
-            }
+            /* if (permissionRole.Equals("admin"))
+             {*/
+            OpenChildForm(new Forms.fSettingAdmin(this), sender);
+            /* }
+             else
+             {
+                 OpenChildForm(new Forms.fSettingOther(), sender);
+             }*/
         }
         // =============load data
 
@@ -173,9 +130,9 @@ namespace GUI
 
         }
 
-        private void fMainAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnRegist_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            OpenChildForm(new Forms.fRegist(), sender);
         }
     }
 }

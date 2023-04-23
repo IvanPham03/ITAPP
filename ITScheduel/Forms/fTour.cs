@@ -16,9 +16,11 @@ namespace GUI.Forms
 {
     public partial class fTour : Form
     {
-        public fTour()
+        public fMainAdmin main;
+        public fTour(fMainAdmin main)
         {
             InitializeComponent();
+            this.main = main;
             LoadListTour();
         }
 
@@ -43,7 +45,7 @@ namespace GUI.Forms
         //==
         public void LoadListTour()
         {
-            dgvTour.DataSource = TourBus.Instance.LoadTour();
+            dgvTour.DataSource = TourBUS.Instance.LoadTour();
             dgvTour.DefaultCellStyle.Font = new Font("", 12);
         }
 
@@ -72,7 +74,7 @@ namespace GUI.Forms
             tourDTO.TOURNAME = txtNameTour.Text;
             tourDTO.DATESTART = dtpStart.Value.ToShortDateString();
             tourDTO.DATEEND = dtpStart.Value.ToShortDateString();
-            String rs = TourBus.Instance.AddTour(tourDTO);
+            String rs = TourBUS.Instance.AddTour(tourDTO);
             if (rs != "1")
             {
                 MessageBox.Show(rs.ToString(), "Thêm dữ liệu");
@@ -90,10 +92,9 @@ namespace GUI.Forms
         {
 
             TourDTO tourDTO = new TourDTO();
-            tourDTO.TOURNAME = txtNameTour.Text;
-            tourDTO.TOURID = txtTourId.Text;
+            string key = txtInputSearch.Text;
             ResetDataGridview();
-            dgvTour.DataSource = TourBus.Instance.SearchTour(tourDTO);
+            dgvTour.DataSource = TourBUS.Instance.SearchTour(key);
             dgvTour.DefaultCellStyle.Font = new Font("", 12);
         }
 
@@ -109,7 +110,7 @@ namespace GUI.Forms
             tourDTO.TOURID = txtTourId.Text;
             tourDTO.DATESTART = dtpStart.Value.ToShortDateString();
             tourDTO.DATEEND = dtpStart.Value.ToShortDateString();
-            TourBus.Instance.SaveTour(tourDTO);
+            TourBUS.Instance.SaveTour(tourDTO);
             LoadListTour();
             btnBack.Enabled = false;
         }
@@ -120,7 +121,7 @@ namespace GUI.Forms
             {
                 TourDTO tourDTO = new TourDTO();
                 tourDTO.TOURID = txtTourId.Text;
-                int rs = TourBus.Instance.DeleteTour(tourDTO);
+                int rs = TourBUS.Instance.DeleteTour(tourDTO);
                 if (rs == 1)
                 {
                     MessageBox.Show("Xóa dữ liệu thành công!", "Xóa dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -8,7 +8,6 @@ namespace DTO
    
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
-        public string EMAIL { get; set; }
         public string ROLE { get; set; }
         public string PHONENUMBER { get; set; }
         public string CREATEAT { get; set; }

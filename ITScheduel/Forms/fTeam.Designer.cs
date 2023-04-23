@@ -30,29 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTeam));
             groupBox1 = new GroupBox();
+            btnRegist = new Button();
+            btnPlayer = new Button();
             label6 = new Label();
             textBox3 = new TextBox();
-            textBox4 = new TextBox();
             label4 = new Label();
             textBox2 = new TextBox();
             label3 = new Label();
-            label2 = new Label();
             txtTeamID = new TextBox();
             label1 = new Label();
             panel1 = new Panel();
-            button4 = new Button();
-            btnExit = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
             groupBox3 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            txtInputSearch = new TextBox();
+            btnRefesh = new Button();
+            btnCopy = new Button();
+            btnCancel = new Button();
+            btnDelete = new Button();
+            btnAdd = new Button();
+            btnEdit = new Button();
+            btnSave = new Button();
+            btnSearch = new Button();
+            btnBack = new Button();
             panel3 = new Panel();
             dataGridView1 = new DataGridView();
             groupBox1.SuspendLayout();
@@ -64,30 +62,69 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnRegist);
+            groupBox1.Controls.Add(btnPlayer);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(txtTeamID);
             groupBox1.Controls.Add(label1);
+            groupBox1.FlatStyle = FlatStyle.Flat;
             groupBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.RoyalBlue;
-            groupBox1.Location = new Point(12, 15);
+            groupBox1.Location = new Point(12, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(619, 353);
+            groupBox1.Size = new Size(762, 498);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin đội";
+            // 
+            // btnRegist
+            // 
+            btnRegist.Cursor = Cursors.Hand;
+            btnRegist.FlatStyle = FlatStyle.Flat;
+            btnRegist.Font = new Font("Segoe UI Semibold", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRegist.ForeColor = Color.RoyalBlue;
+            btnRegist.Image = (Image)resources.GetObject("btnRegist.Image");
+            btnRegist.Location = new Point(262, 378);
+            btnRegist.Margin = new Padding(10, 3, 3, 3);
+            btnRegist.Name = "btnRegist";
+            btnRegist.Padding = new Padding(50, 0, 0, 0);
+            btnRegist.Size = new Size(407, 80);
+            btnRegist.TabIndex = 15;
+            btnRegist.TabStop = false;
+            btnRegist.Text = " Đăng ký giải";
+            btnRegist.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnRegist.UseVisualStyleBackColor = true;
+            btnRegist.Click += btnRegist_Click;
+            // 
+            // btnPlayer
+            // 
+            btnPlayer.Cursor = Cursors.Hand;
+            btnPlayer.FlatStyle = FlatStyle.Flat;
+            btnPlayer.Font = new Font("Segoe UI Semibold", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPlayer.ForeColor = Color.RoyalBlue;
+            btnPlayer.Image = (Image)resources.GetObject("btnPlayer.Image");
+            btnPlayer.Location = new Point(262, 269);
+            btnPlayer.Margin = new Padding(10, 3, 3, 3);
+            btnPlayer.Name = "btnPlayer";
+            btnPlayer.Padding = new Padding(60, 0, 0, 0);
+            btnPlayer.Size = new Size(407, 80);
+            btnPlayer.TabIndex = 14;
+            btnPlayer.TabStop = false;
+            btnPlayer.Text = " Thành viên";
+            btnPlayer.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPlayer.UseVisualStyleBackColor = true;
+            btnPlayer.Click += btnPlayer_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.Red;
-            label6.Location = new Point(556, 270);
+            label6.Location = new Point(675, 191);
             label6.Name = "label6";
             label6.Size = new Size(60, 30);
             label6.TabIndex = 13;
@@ -95,24 +132,17 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(213, 264);
+            textBox3.Location = new Point(262, 189);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(337, 36);
+            textBox3.Size = new Size(407, 36);
             textBox3.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(213, 194);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(337, 36);
-            textBox4.TabIndex = 8;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.RoyalBlue;
-            label4.Location = new Point(18, 263);
+            label4.Location = new Point(34, 188);
             label4.Name = "label4";
             label4.Size = new Size(198, 38);
             label4.TabIndex = 7;
@@ -121,9 +151,9 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(213, 127);
+            textBox2.Location = new Point(262, 117);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(337, 36);
+            textBox2.Size = new Size(407, 36);
             textBox2.TabIndex = 4;
             // 
             // label3
@@ -131,28 +161,17 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.RoyalBlue;
-            label3.Location = new Point(18, 123);
+            label3.Location = new Point(34, 113);
             label3.Name = "label3";
             label3.Size = new Size(109, 38);
             label3.TabIndex = 5;
             label3.Text = "Tên đội";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.RoyalBlue;
-            label2.Location = new Point(18, 190);
-            label2.Name = "label2";
-            label2.Size = new Size(156, 38);
-            label2.TabIndex = 3;
-            label2.Text = "Đội trưởng";
-            // 
             // txtTeamID
             // 
-            txtTeamID.Location = new Point(213, 61);
+            txtTeamID.Location = new Point(262, 51);
             txtTeamID.Name = "txtTeamID";
-            txtTeamID.Size = new Size(337, 36);
+            txtTeamID.Size = new Size(407, 36);
             txtTeamID.TabIndex = 1;
             // 
             // label1
@@ -160,7 +179,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.RoyalBlue;
-            label1.Location = new Point(18, 52);
+            label1.Location = new Point(34, 42);
             label1.Name = "label1";
             label1.Size = new Size(107, 38);
             label1.TabIndex = 1;
@@ -168,269 +187,235 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(btnExit);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(button8);
-            panel1.Controls.Add(button9);
-            panel1.Controls.Add(button10);
-            panel1.Controls.Add(button11);
-            panel1.Controls.Add(button12);
             panel1.Controls.Add(groupBox3);
             panel1.Controls.Add(groupBox1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1584, 401);
+            panel1.Size = new Size(1577, 533);
             panel1.TabIndex = 1;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.Transparent;
-            button4.Cursor = Cursors.Hand;
-            button4.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button4.FlatAppearance.BorderSize = 3;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.RoyalBlue;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(1199, 273);
-            button4.Name = "button4";
-            button4.Padding = new Padding(10, 0, 0, 0);
-            button4.Size = new Size(185, 95);
-            button4.TabIndex = 20;
-            button4.Text = "     Sao            chép      ";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // btnExit
-            // 
-            btnExit.BackColor = Color.Transparent;
-            btnExit.Cursor = Cursors.Hand;
-            btnExit.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnExit.FlatAppearance.BorderSize = 3;
-            btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExit.ForeColor = Color.RoyalBlue;
-            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
-            btnExit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExit.Location = new Point(1390, 272);
-            btnExit.Name = "btnExit";
-            btnExit.Padding = new Padding(10, 0, 0, 0);
-            btnExit.Size = new Size(185, 95);
-            btnExit.TabIndex = 19;
-            btnExit.Text = "     Thoát";
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.Transparent;
-            button6.Cursor = Cursors.Hand;
-            button6.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button6.FlatAppearance.BorderSize = 3;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = Color.RoyalBlue;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(1008, 273);
-            button6.Name = "button6";
-            button6.Padding = new Padding(10, 0, 0, 0);
-            button6.Size = new Size(185, 95);
-            button6.TabIndex = 18;
-            button6.Text = "     Xóa tất     cả";
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.Transparent;
-            button7.Cursor = Cursors.Hand;
-            button7.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button7.FlatAppearance.BorderSize = 3;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.ForeColor = Color.RoyalBlue;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(1390, 149);
-            button7.Name = "button7";
-            button7.Padding = new Padding(10, 0, 0, 0);
-            button7.Size = new Size(185, 95);
-            button7.TabIndex = 17;
-            button7.Text = "     Xóa";
-            button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.Transparent;
-            button8.Cursor = Cursors.Hand;
-            button8.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button8.FlatAppearance.BorderSize = 3;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.ForeColor = Color.RoyalBlue;
-            button8.Image = Properties.Resources.plus;
-            button8.ImageAlign = ContentAlignment.MiddleLeft;
-            button8.Location = new Point(1008, 28);
-            button8.Name = "button8";
-            button8.Padding = new Padding(10, 0, 0, 0);
-            button8.Size = new Size(185, 95);
-            button8.TabIndex = 12;
-            button8.Text = "     Thêm";
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            button9.BackColor = Color.Transparent;
-            button9.Cursor = Cursors.Hand;
-            button9.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button9.FlatAppearance.BorderSize = 3;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.ForeColor = Color.RoyalBlue;
-            button9.Image = (Image)resources.GetObject("button9.Image");
-            button9.ImageAlign = ContentAlignment.MiddleLeft;
-            button9.Location = new Point(1199, 149);
-            button9.Name = "button9";
-            button9.Padding = new Padding(10, 0, 0, 0);
-            button9.Size = new Size(185, 95);
-            button9.TabIndex = 16;
-            button9.Text = "     Sửa";
-            button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            button10.BackColor = Color.Transparent;
-            button10.Cursor = Cursors.Hand;
-            button10.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button10.FlatAppearance.BorderSize = 3;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button10.ForeColor = Color.RoyalBlue;
-            button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.ImageAlign = ContentAlignment.MiddleLeft;
-            button10.Location = new Point(1199, 28);
-            button10.Name = "button10";
-            button10.Padding = new Padding(10, 0, 0, 0);
-            button10.Size = new Size(185, 95);
-            button10.TabIndex = 13;
-            button10.Text = "     Lưu";
-            button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            button11.BackColor = Color.Transparent;
-            button11.Cursor = Cursors.Hand;
-            button11.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button11.FlatAppearance.BorderSize = 3;
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button11.ForeColor = Color.RoyalBlue;
-            button11.Image = (Image)resources.GetObject("button11.Image");
-            button11.ImageAlign = ContentAlignment.MiddleLeft;
-            button11.Location = new Point(1008, 149);
-            button11.Name = "button11";
-            button11.Padding = new Padding(10, 0, 0, 0);
-            button11.Size = new Size(185, 95);
-            button11.TabIndex = 15;
-            button11.Text = "     Tìm ";
-            button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            button12.BackColor = Color.Transparent;
-            button12.Cursor = Cursors.Hand;
-            button12.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button12.FlatAppearance.BorderSize = 3;
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button12.ForeColor = Color.RoyalBlue;
-            button12.Image = (Image)resources.GetObject("button12.Image");
-            button12.ImageAlign = ContentAlignment.MiddleLeft;
-            button12.Location = new Point(1390, 28);
-            button12.Name = "button12";
-            button12.Padding = new Padding(10, 0, 0, 0);
-            button12.Size = new Size(185, 95);
-            button12.TabIndex = 14;
-            button12.Text = "     Nhập        lại      ";
-            button12.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(button3);
-            groupBox3.Controls.Add(button2);
-            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(txtInputSearch);
+            groupBox3.Controls.Add(btnRefesh);
+            groupBox3.Controls.Add(btnCopy);
+            groupBox3.Controls.Add(btnCancel);
+            groupBox3.Controls.Add(btnDelete);
+            groupBox3.Controls.Add(btnAdd);
+            groupBox3.Controls.Add(btnEdit);
+            groupBox3.Controls.Add(btnSave);
+            groupBox3.Controls.Add(btnSearch);
+            groupBox3.Controls.Add(btnBack);
             groupBox3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             groupBox3.ForeColor = Color.RoyalBlue;
-            groupBox3.Location = new Point(643, 15);
+            groupBox3.Location = new Point(780, 5);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(353, 353);
-            groupBox3.TabIndex = 9;
+            groupBox3.Size = new Size(797, 498);
+            groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Dữ liệu";
+            groupBox3.Text = "Chức năng";
             // 
-            // button3
+            // txtInputSearch
             // 
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button3.FlatAppearance.BorderSize = 3;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.RoyalBlue;
-            button3.Location = new Point(75, 243);
-            button3.Name = "button3";
-            button3.Size = new Size(200, 60);
-            button3.TabIndex = 2;
-            button3.Text = "Phục hồi";
-            button3.UseVisualStyleBackColor = true;
+            txtInputSearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtInputSearch.Location = new Point(109, 39);
+            txtInputSearch.Name = "txtInputSearch";
+            txtInputSearch.PlaceholderText = "Nhập thông tin tìm kiếm....";
+            txtInputSearch.Size = new Size(619, 45);
+            txtInputSearch.TabIndex = 32;
             // 
-            // button2
+            // btnRefesh
             // 
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button2.FlatAppearance.BorderSize = 3;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.RoyalBlue;
-            button2.Location = new Point(75, 146);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 60);
-            button2.TabIndex = 1;
-            button2.Text = "Sao lưu";
-            button2.UseVisualStyleBackColor = true;
+            btnRefesh.BackColor = Color.Transparent;
+            btnRefesh.Cursor = Cursors.Hand;
+            btnRefesh.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnRefesh.FlatAppearance.BorderSize = 3;
+            btnRefesh.FlatStyle = FlatStyle.Flat;
+            btnRefesh.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRefesh.ForeColor = Color.RoyalBlue;
+            btnRefesh.Image = (Image)resources.GetObject("btnRefesh.Image");
+            btnRefesh.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRefesh.Location = new Point(109, 362);
+            btnRefesh.Name = "btnRefesh";
+            btnRefesh.Padding = new Padding(10, 0, 0, 0);
+            btnRefesh.Size = new Size(185, 95);
+            btnRefesh.TabIndex = 30;
+            btnRefesh.Text = "       Làm        mới";
+            btnRefesh.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnCopy
             // 
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.RoyalBlue;
-            button1.FlatAppearance.BorderSize = 3;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.RoyalBlue;
-            button1.Location = new Point(75, 50);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 60);
-            button1.TabIndex = 0;
-            button1.Text = "Xuất";
-            button1.UseVisualStyleBackColor = true;
+            btnCopy.BackColor = Color.Transparent;
+            btnCopy.Cursor = Cursors.Hand;
+            btnCopy.Enabled = false;
+            btnCopy.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnCopy.FlatAppearance.BorderSize = 3;
+            btnCopy.FlatStyle = FlatStyle.Flat;
+            btnCopy.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCopy.ForeColor = Color.RoyalBlue;
+            btnCopy.Image = (Image)resources.GetObject("btnCopy.Image");
+            btnCopy.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCopy.Location = new Point(544, 362);
+            btnCopy.Name = "btnCopy";
+            btnCopy.Padding = new Padding(10, 0, 0, 0);
+            btnCopy.Size = new Size(185, 95);
+            btnCopy.TabIndex = 29;
+            btnCopy.Text = "       Hướng   dẫn";
+            btnCopy.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = Color.Transparent;
+            btnCancel.Cursor = Cursors.Hand;
+            btnCancel.Enabled = false;
+            btnCancel.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnCancel.FlatAppearance.BorderSize = 3;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.ForeColor = Color.RoyalBlue;
+            btnCancel.Image = (Image)resources.GetObject("btnCancel.Image");
+            btnCancel.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancel.Location = new Point(544, 236);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Padding = new Padding(10, 0, 0, 0);
+            btnCancel.Size = new Size(185, 95);
+            btnCancel.TabIndex = 28;
+            btnCancel.Text = "    Hủy";
+            btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.Transparent;
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.Enabled = false;
+            btnDelete.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnDelete.FlatAppearance.BorderSize = 3;
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDelete.ForeColor = Color.RoyalBlue;
+            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
+            btnDelete.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDelete.Location = new Point(326, 236);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Padding = new Padding(10, 0, 0, 0);
+            btnDelete.Size = new Size(185, 95);
+            btnDelete.TabIndex = 27;
+            btnDelete.Text = "     Xóa";
+            btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = Color.Transparent;
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnAdd.FlatAppearance.BorderSize = 3;
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdd.ForeColor = Color.RoyalBlue;
+            btnAdd.Image = Properties.Resources.plus;
+            btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAdd.Location = new Point(109, 112);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Padding = new Padding(10, 0, 0, 0);
+            btnAdd.Size = new Size(185, 95);
+            btnAdd.TabIndex = 22;
+            btnAdd.Text = "     Thêm";
+            btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnEdit
+            // 
+            btnEdit.BackColor = Color.Transparent;
+            btnEdit.Cursor = Cursors.Hand;
+            btnEdit.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnEdit.FlatAppearance.BorderSize = 3;
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEdit.ForeColor = Color.RoyalBlue;
+            btnEdit.Image = (Image)resources.GetObject("btnEdit.Image");
+            btnEdit.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEdit.Location = new Point(326, 362);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Padding = new Padding(10, 0, 0, 0);
+            btnEdit.Size = new Size(185, 95);
+            btnEdit.TabIndex = 26;
+            btnEdit.Text = "      Xuất";
+            btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            btnSave.BackColor = Color.Transparent;
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.Enabled = false;
+            btnSave.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnSave.FlatAppearance.BorderSize = 3;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.ForeColor = Color.RoyalBlue;
+            btnSave.Image = (Image)resources.GetObject("btnSave.Image");
+            btnSave.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSave.Location = new Point(326, 112);
+            btnSave.Name = "btnSave";
+            btnSave.Padding = new Padding(10, 0, 0, 0);
+            btnSave.Size = new Size(185, 95);
+            btnSave.TabIndex = 23;
+            btnSave.Text = "     Lưu";
+            btnSave.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.Transparent;
+            btnSearch.Cursor = Cursors.Hand;
+            btnSearch.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnSearch.FlatAppearance.BorderSize = 3;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.RoyalBlue;
+            btnSearch.Image = (Image)resources.GetObject("btnSearch.Image");
+            btnSearch.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSearch.Location = new Point(110, 236);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Padding = new Padding(10, 0, 0, 0);
+            btnSearch.Size = new Size(185, 95);
+            btnSearch.TabIndex = 25;
+            btnSearch.Text = "    Tìm ";
+            btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.Transparent;
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.Enabled = false;
+            btnBack.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnBack.FlatAppearance.BorderSize = 3;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBack.ForeColor = Color.RoyalBlue;
+            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
+            btnBack.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBack.Location = new Point(544, 112);
+            btnBack.Name = "btnBack";
+            btnBack.Padding = new Padding(10, 0, 0, 0);
+            btnBack.Size = new Size(185, 95);
+            btnBack.TabIndex = 24;
+            btnBack.Text = "      Nhập         lại      ";
+            btnBack.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             panel3.Controls.Add(dataGridView1);
-            panel3.Location = new Point(0, 397);
+            panel3.Location = new Point(0, 526);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1584, 863);
+            panel3.Size = new Size(1591, 744);
             panel3.TabIndex = 3;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 0);
+            dataGridView1.Location = new Point(12, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
             dataGridView1.RowTemplate.Height = 37;
-            dataGridView1.Size = new Size(1565, 850);
+            dataGridView1.Size = new Size(1565, 738);
             dataGridView1.TabIndex = 0;
             // 
             // fTeam
@@ -441,10 +426,12 @@
             Controls.Add(panel1);
             Name = "fTeam";
             Text = "fSchedule";
+            Load += fTeam_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             panel1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -453,33 +440,31 @@
         #endregion
 
         private GroupBox groupBox1;
-        private Label label4;
         private DateTimePicker dateTimePicker2;
         private TextBox textBox2;
         private Label label3;
-        private Label label2;
         private DateTimePicker dateTimePicker1;
         private TextBox txtTeamID;
         private Label label1;
         private Panel panel1;
-        private GroupBox groupBox3;
-        private Button button3;
-        private Button button2;
-        private Button button1;
         private RadioButton radioButton2;
         private Panel panel3;
         private DataGridView dataGridView1;
-        private TextBox textBox3;
-        private TextBox textBox4;
         private Label label6;
-        private Button button4;
-        private Button btnExit;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
+        private TextBox textBox3;
+        private Label label4;
+        private GroupBox groupBox3;
+        private Button btnRefesh;
+        private Button btnCopy;
+        private Button btnCancel;
+        private Button btnDelete;
+        private Button btnAdd;
+        private Button btnEdit;
+        private Button btnSave;
+        private Button btnSearch;
+        private Button btnBack;
+        private Button btnPlayer;
+        private Button btnRegist;
+        public TextBox txtInputSearch;
     }
 }

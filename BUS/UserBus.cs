@@ -10,23 +10,23 @@ using System.Diagnostics;
 
 namespace BUS
 {
-    public class UserBus
+    public class UserBUS
     {
-        private static UserBus instance;
+        private static UserBUS instance;
 
-        public static UserBus Instance
+        public static UserBUS Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new UserBus();
+                    instance = new UserBUS();
                 }
                 return instance;
             }
 
         }
-        private UserBus()
+        private UserBUS()
         {
 
         }

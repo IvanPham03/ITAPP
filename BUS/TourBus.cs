@@ -10,23 +10,23 @@ using Microsoft.IdentityModel.Tokens;
 namespace BUS
 {
     
-    public class TourBus
+    public class TourBUS
     {
-        private static TourBus instance;
+        private static TourBUS instance;
 
-        public static TourBus Instance
+        public static TourBUS Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new TourBus();
+                    instance = new TourBUS();
                 }
                 return instance;
             }
 
         }
-        private TourBus()
+        private TourBUS()
         {
 
         }
@@ -53,16 +53,16 @@ namespace BUS
         {
             return DAO.TourDAO.Instance.DeleteTour(tourDTO);
         }
-        public DataTable SearchTour(TourDTO tourDTO)
+        public DataTable SearchTour(string key)
         {
-            if (String.IsNullOrEmpty(tourDTO.TOURNAME) && String.IsNullOrEmpty(tourDTO.TOURID))
+            if (String.IsNullOrEmpty(key))
             {
                 DataTable errorTable = new DataTable();
-                errorTable.Columns.Add("Vui lòng truyền ít nhất 1 tham số tìm kiếm như Mã giải hoặc Tên giải!");
+                errorTable.Columns.Add("Vui lòng nhập thông tin tìm kiếm!");
                 return errorTable;
 
             }
-            return DAO.TourDAO.Instance.SearchTour(tourDTO);
+            return DAO.TourDAO.Instance.SearchTour(key);
         }
     }
 }

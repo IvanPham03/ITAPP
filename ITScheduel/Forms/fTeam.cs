@@ -31,7 +31,25 @@ namespace GUI.Forms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             return;
-            
+
+        }
+
+        private void fTeam_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnPlayer_Click(object sender, EventArgs e)
+        {
+           fPlayer Player = new fPlayer();
+            Player.ShowDialog();
+        }
+
+        private void btnRegist_Click(object sender, EventArgs e)
+        {
+            fPopupRegist PopupRegist = new fPopupRegist();
+            PopupRegist.ShowDialog();
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mu2Zy+YTZZfz/w8NQ9l67fbNFrjfe1+0xCerhMWNUiXvu9FIQCo7IJRF2fwRyYsxQ5mMhjXv7IbgL3gPRjBt/A==",
+  "dgSpecHash": "udLUuUqUMkt2J5W2M+20DYO6NVjRTLg33nqftZID9wDSB2o8J/PdZLWXTD/pCsF8+DKZGL2kqTRn4qATC5/EUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\T\\Desktop\\DAO\\DAO.csproj",
+  "projectFilePath": "C:\\Users\\T\\ITAPP\\DAO\\DAO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\T\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\T\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

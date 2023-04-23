@@ -36,7 +36,7 @@ namespace ITScheduel
             UserDTO userDTO = new UserDTO();
             userDTO.PHONENUMBER = txtPhoneNumber.Text;
             userDTO.PASSWORD = txtPassword.Text;
-            string result = (string)UserBus.Instance.Login(userDTO);
+            string result = (string)UserBUS.Instance.Login(userDTO);
             mainAdmin.Message = result;
             if (!string.IsNullOrEmpty(result))
             {

@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI.Forms
 {
-    public partial class fParticipant : Form
+    public partial class fPopupRegist : Form
     {
-        public fParticipant()
+        public fPopupRegist()
         {
             InitializeComponent();
         }
 
-        private void groupBox4_Enter(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

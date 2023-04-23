@@ -44,10 +44,10 @@ namespace DAO
         {
             return DataProvider.Instance.ExecuteNonQuery("EXEC dbo.DeleteTour @TourID ", new object[] {tourDTO.TOURID });
         }
-        public DataTable SearchTour(TourDTO tourDTO)
+        public DataTable SearchTour(string key)
         {
             
-            return DataProvider.Instance.ExecuteQuery("EXEC dbo.SeachTour @TourName , @TourID ", new object[] { tourDTO.TOURNAME, tourDTO.TOURID });
+            return DataProvider.Instance.ExecuteQuery("EXEC dbo.SeachTour @TourName , @TourID ", new object[] { key });
         }
     }
 }

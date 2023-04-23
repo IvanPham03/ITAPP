@@ -1,4 +1,5 @@
 ﻿using DTO;
+using DAO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,60 +9,47 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class AccountBus
+    public class AccountBUS
     {
-        private static AccountBus instance;
+        private static AccountBUS instance;
 
-        public static AccountBus Instance
+        public static AccountBUS Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new AccountBus();
+                    instance = new AccountBUS();
                 }
                 return instance;
             }
 
         }
-        private AccountBus()
+        private AccountBUS()
         {
 
         }
-        /*public DataTable LoadAccount()
+        public DataTable LoadAccount()
         {
             DataTable dt = new DataTable();
             dt = DAO.AccountDAO.Instance.GetListAccount();
             return dt;
         }
         public String AddAccount(UserDTO userDTO)
-        {
-            if (String.IsNullOrEmpty(userDTO.TOURNAME))
-            {
-
-                return "Vui lòng nhập tên giải!";
-
-            }
-            return DAO.AccountDAO.Instance.AddTour(userDTO).ToString();
+        { 
+            return DAO.AccountDAO.Instance.AddAccount(userDTO).ToString();
         }
         public int SaveAccount(UserDTO userDTO)
         {
-            return DAO.AccountDAO.Instance.SaveTour(userDTO);
+            return DAO.AccountDAO.Instance.SaveAccount(userDTO);
         }
         public int DeleteAccount(UserDTO userDTO)
         {
-            return DAO.AccountDAO.Instance.DeleteTour(userDTO);
+            return DAO.AccountDAO.Instance.DeleteAccount(userDTO);
         }
-        public DataTable SearchAccount(UserDTO userDTO)
+        public DataTable SearchAccount(string key)
         {
-            if (String.IsNullOrEmpty(userDTO.TOURNAME) && String.IsNullOrEmpty(userDTO.TOURID))
-            {
-                DataTable errorTable = new DataTable();
-                errorTable.Columns.Add("Vui lòng truyền ít nhất 1 tham số tìm kiếm như Mã giải hoặc Tên giải!");
-                return errorTable;
-
-            }
-            return DAO.AccountDAO.Instance.SearchAccount(userDTO);
-        }*/
+            return DAO.AccountDAO.Instance.SearchAccount(key);
+        }
     }
 }

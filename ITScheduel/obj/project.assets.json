@@ -2353,11 +2353,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\T\\Desktop\\ITScheduel\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\T\\ITAPP\\ITScheduel\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\T\\Desktop\\ITScheduel\\GUI.csproj",
+      "projectPath": "C:\\Users\\T\\ITAPP\\ITScheduel\\GUI.csproj",
       "packagesPath": "C:\\Users\\T\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\T\\Desktop\\ITScheduel\\obj\\",
+      "outputPath": "C:\\Users\\T\\ITAPP\\ITScheduel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\T\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2374,8 +2374,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\T\\Desktop\\BUS\\BUS.csproj": {
-              "projectPath": "C:\\Users\\T\\Desktop\\BUS\\BUS.csproj"
+            "C:\\Users\\T\\ITAPP\\BUS\\BUS.csproj": {
+              "projectPath": "C:\\Users\\T\\ITAPP\\BUS\\BUS.csproj"
             }
           }
         }
