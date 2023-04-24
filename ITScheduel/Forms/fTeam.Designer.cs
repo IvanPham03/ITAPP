@@ -30,12 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTeam));
             groupBox1 = new GroupBox();
+            cbNumber = new ComboBox();
             btnRegist = new Button();
             btnPlayer = new Button();
-            label6 = new Label();
-            textBox3 = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
+            txtNameTeam = new TextBox();
             label3 = new Label();
             txtTeamID = new TextBox();
             label1 = new Label();
@@ -52,22 +51,21 @@
             btnSearch = new Button();
             btnBack = new Button();
             panel3 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvTeam = new DataGridView();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             groupBox3.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTeam).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(cbNumber);
             groupBox1.Controls.Add(btnRegist);
             groupBox1.Controls.Add(btnPlayer);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(txtNameTeam);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(txtTeamID);
             groupBox1.Controls.Add(label1);
@@ -81,14 +79,25 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin đội";
             // 
+            // cbNumber
+            // 
+            cbNumber.FormattingEnabled = true;
+            cbNumber.Items.AddRange(new object[] { "5", "6", "7", "8", "9", "10", "11" });
+            cbNumber.Location = new Point(283, 188);
+            cbNumber.Name = "cbNumber";
+            cbNumber.Size = new Size(407, 38);
+            cbNumber.TabIndex = 16;
+            cbNumber.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // btnRegist
             // 
             btnRegist.Cursor = Cursors.Hand;
+            btnRegist.Enabled = false;
             btnRegist.FlatStyle = FlatStyle.Flat;
             btnRegist.Font = new Font("Segoe UI Semibold", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             btnRegist.ForeColor = Color.RoyalBlue;
             btnRegist.Image = (Image)resources.GetObject("btnRegist.Image");
-            btnRegist.Location = new Point(262, 378);
+            btnRegist.Location = new Point(283, 378);
             btnRegist.Margin = new Padding(10, 3, 3, 3);
             btnRegist.Name = "btnRegist";
             btnRegist.Padding = new Padding(50, 0, 0, 0);
@@ -103,11 +112,12 @@
             // btnPlayer
             // 
             btnPlayer.Cursor = Cursors.Hand;
+            btnPlayer.Enabled = false;
             btnPlayer.FlatStyle = FlatStyle.Flat;
             btnPlayer.Font = new Font("Segoe UI Semibold", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             btnPlayer.ForeColor = Color.RoyalBlue;
             btnPlayer.Image = (Image)resources.GetObject("btnPlayer.Image");
-            btnPlayer.Location = new Point(262, 269);
+            btnPlayer.Location = new Point(283, 269);
             btnPlayer.Margin = new Padding(10, 3, 3, 3);
             btnPlayer.Name = "btnPlayer";
             btnPlayer.Padding = new Padding(60, 0, 0, 0);
@@ -118,24 +128,6 @@
             btnPlayer.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnPlayer.UseVisualStyleBackColor = true;
             btnPlayer.Click += btnPlayer_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.Red;
-            label6.Location = new Point(675, 191);
-            label6.Name = "label6";
-            label6.Size = new Size(60, 30);
-            label6.TabIndex = 13;
-            label6.Text = "(*Số)";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(262, 189);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(407, 36);
-            textBox3.TabIndex = 9;
             // 
             // label4
             // 
@@ -149,12 +141,12 @@
             label4.Text = "Số thành viên ";
             label4.Click += label4_Click;
             // 
-            // textBox2
+            // txtNameTeam
             // 
-            textBox2.Location = new Point(262, 117);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(407, 36);
-            textBox2.TabIndex = 4;
+            txtNameTeam.Location = new Point(283, 117);
+            txtNameTeam.Name = "txtNameTeam";
+            txtNameTeam.Size = new Size(407, 36);
+            txtNameTeam.TabIndex = 4;
             // 
             // label3
             // 
@@ -169,7 +161,8 @@
             // 
             // txtTeamID
             // 
-            txtTeamID.Location = new Point(262, 51);
+            txtTeamID.Enabled = false;
+            txtTeamID.Location = new Point(283, 51);
             txtTeamID.Name = "txtTeamID";
             txtTeamID.Size = new Size(407, 36);
             txtTeamID.TabIndex = 1;
@@ -242,6 +235,7 @@
             btnRefesh.TabIndex = 30;
             btnRefesh.Text = "       Làm        mới";
             btnRefesh.UseVisualStyleBackColor = false;
+            btnRefesh.Click += btnRefesh_Click;
             // 
             // btnCopy
             // 
@@ -282,6 +276,7 @@
             btnCancel.TabIndex = 28;
             btnCancel.Text = "    Hủy";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnDelete
             // 
@@ -302,6 +297,7 @@
             btnDelete.TabIndex = 27;
             btnDelete.Text = "     Xóa";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_click;
             // 
             // btnAdd
             // 
@@ -321,6 +317,7 @@
             btnAdd.TabIndex = 22;
             btnAdd.Text = "     Thêm";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnEdit
             // 
@@ -360,6 +357,7 @@
             btnSave.TabIndex = 23;
             btnSave.Text = "     Lưu";
             btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // btnSearch
             // 
@@ -379,6 +377,7 @@
             btnSearch.TabIndex = 25;
             btnSearch.Text = "    Tìm ";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnBack
             // 
@@ -399,24 +398,31 @@
             btnBack.TabIndex = 24;
             btnBack.Text = "      Nhập         lại      ";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // panel3
             // 
-            panel3.Controls.Add(dataGridView1);
+            panel3.Controls.Add(dgvTeam);
             panel3.Location = new Point(0, 526);
             panel3.Name = "panel3";
             panel3.Size = new Size(1591, 744);
             panel3.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgvTeam
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 72;
-            dataGridView1.RowTemplate.Height = 37;
-            dataGridView1.Size = new Size(1565, 738);
-            dataGridView1.TabIndex = 0;
+            dgvTeam.AllowUserToAddRows = false;
+            dgvTeam.AllowUserToDeleteRows = false;
+            dgvTeam.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTeam.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTeam.Location = new Point(12, 3);
+            dgvTeam.Name = "dgvTeam";
+            dgvTeam.ReadOnly = true;
+            dgvTeam.RowHeadersWidth = 72;
+            dgvTeam.RowTemplate.Height = 37;
+            dgvTeam.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTeam.Size = new Size(1565, 738);
+            dgvTeam.TabIndex = 0;
+            dgvTeam.CellClick += dgvTeam_CellContentClick;
             // 
             // fTeam
             // 
@@ -433,7 +439,7 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTeam).EndInit();
             ResumeLayout(false);
         }
 
@@ -441,17 +447,16 @@
 
         private GroupBox groupBox1;
         private DateTimePicker dateTimePicker2;
-        private TextBox textBox2;
+        private TextBox txtNameTeam;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker tdateTimePicker1;
         private TextBox txtTeamID;
         private Label label1;
         private Panel panel1;
         private RadioButton radioButton2;
         private Panel panel3;
-        private DataGridView dataGridView1;
+        private DataGridView dgvTeam;
         private Label label6;
-        private TextBox textBox3;
         private Label label4;
         private GroupBox groupBox3;
         private Button btnRefesh;
@@ -466,5 +471,6 @@
         private Button btnPlayer;
         private Button btnRegist;
         public TextBox txtInputSearch;
+        private ComboBox cbNumber;
     }
 }

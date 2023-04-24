@@ -33,8 +33,8 @@
             btnCancel = new Button();
             label1 = new Label();
             label4 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cbIdTour = new ComboBox();
+            cbNameTour = new ComboBox();
             label2 = new Label();
             dtpEnd = new DateTimePicker();
             label5 = new Label();
@@ -45,6 +45,7 @@
             // 
             btnRegist.BackColor = Color.Transparent;
             btnRegist.Cursor = Cursors.Hand;
+            btnRegist.Enabled = false;
             btnRegist.FlatAppearance.BorderColor = Color.RoyalBlue;
             btnRegist.FlatAppearance.BorderSize = 3;
             btnRegist.FlatStyle = FlatStyle.Flat;
@@ -59,6 +60,7 @@
             btnRegist.TabIndex = 30;
             btnRegist.Text = "    Đăng ký";
             btnRegist.UseVisualStyleBackColor = false;
+            btnRegist.Click += btnRegist_Click;
             // 
             // btnCancel
             // 
@@ -102,21 +104,23 @@
             label4.TabIndex = 13;
             label4.Text = "Tên giải";
             // 
-            // comboBox1
+            // cbIdTour
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(281, 28);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(506, 38);
-            comboBox1.TabIndex = 14;
+            cbIdTour.FormattingEnabled = true;
+            cbIdTour.Location = new Point(281, 28);
+            cbIdTour.Name = "cbIdTour";
+            cbIdTour.Size = new Size(506, 38);
+            cbIdTour.TabIndex = 14;
+            cbIdTour.SelectedIndexChanged += AutoChange_ID;
             // 
-            // comboBox2
+            // cbNameTour
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(281, 107);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(506, 38);
-            comboBox2.TabIndex = 15;
+            cbNameTour.Enabled = false;
+            cbNameTour.FormattingEnabled = true;
+            cbNameTour.Location = new Point(281, 107);
+            cbNameTour.Name = "cbNameTour";
+            cbNameTour.Size = new Size(506, 38);
+            cbNameTour.TabIndex = 15;
             // 
             // label2
             // 
@@ -173,13 +177,14 @@
             Controls.Add(dtpStart);
             Controls.Add(btnCancel);
             Controls.Add(btnRegist);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cbNameTour);
+            Controls.Add(cbIdTour);
             Controls.Add(label4);
             Controls.Add(label1);
             Name = "fPopupRegist";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Đăng ký giải";
+            Load += fPopupRegist_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,8 +194,8 @@
         private Button btnCancel;
         private Label label1;
         private Label label4;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cbIdTour;
+        private ComboBox cbNameTour;
         private Label label2;
         private DateTimePicker dtpEnd;
         private Label label5;

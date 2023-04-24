@@ -83,6 +83,7 @@
             // btnSchedule
             // 
             btnSchedule.Cursor = Cursors.Hand;
+            btnSchedule.Enabled = false;
             btnSchedule.FlatStyle = FlatStyle.Flat;
             btnSchedule.Font = new Font("Segoe UI Semibold", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             btnSchedule.ForeColor = Color.RoyalBlue;
@@ -342,6 +343,7 @@
             btnEdit.TabIndex = 26;
             btnEdit.Text = "      Xuất";
             btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click_1;
             // 
             // btnSave
             // 

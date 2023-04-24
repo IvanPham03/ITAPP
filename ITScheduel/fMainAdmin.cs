@@ -113,14 +113,14 @@ namespace GUI
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            /* if (permissionRole.Equals("admin"))
-             {*/
-            OpenChildForm(new Forms.fSettingAdmin(this), sender);
-            /* }
+            if (permissionRole.Equals("admin"))
+            {
+                OpenChildForm(new Forms.fSettingAdmin(this), sender);
+                }
              else
-             {
+            {
                  OpenChildForm(new Forms.fSettingOther(), sender);
-             }*/
+             }
         }
         // =============load data
 

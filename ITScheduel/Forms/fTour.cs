@@ -1,6 +1,7 @@
 ﻿using BUS;
 using DAO;
 using DTO;
+using Microsoft.Office.Interop.Excel;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace GUI.Forms
             InitializeComponent();
             this.main = main;
             LoadListTour();
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace GUI.Forms
         public void LoadListTour()
         {
             dgvTour.DataSource = TourBUS.Instance.LoadTour();
-            dgvTour.DefaultCellStyle.Font = new Font("", 12);
+            dgvTour.DefaultCellStyle.Font = new System.Drawing.Font("", 12);
         }
 
         private void dgvTour_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -66,6 +68,8 @@ namespace GUI.Forms
             btnEdit.Enabled = true;
             btnCopy.Enabled = true;
             btnAdd.Enabled = false;
+            checkFillTeam();
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -95,7 +99,7 @@ namespace GUI.Forms
             string key = txtInputSearch.Text;
             ResetDataGridview();
             dgvTour.DataSource = TourBUS.Instance.SearchTour(key);
-            dgvTour.DefaultCellStyle.Font = new Font("", 12);
+            dgvTour.DefaultCellStyle.Font = new System.Drawing.Font("", 12);
         }
 
         private void ResetDataGridview(object sender, EventArgs e)
@@ -159,6 +163,7 @@ namespace GUI.Forms
             txtTourId.Enabled = true;
             btnBack.Enabled = false;
             btnSave.Enabled = false;
+            btnSchedule.Enabled = false;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -191,6 +196,60 @@ namespace GUI.Forms
         {
             LoadListTour();
             ResetForm();
+            btnBack.Enabled = false;
+            btnSave.Enabled = false;
+            btnDelete.Enabled = false;
+            btnCancel.Enabled = false;
+            btnSearch.Enabled = true;
+            btnAdd.Enabled = true;
+        }
+        public void checkFillTeam()
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+            TourDTO tourDTO = new TourDTO();
+            tourDTO.TOURID = txtTourId.Text;
+            dt = RegistBUS.Instance.LoadRegistTour(tourDTO);
+            if (dt.Rows.Count == 16)
+            {
+                btnSchedule.Enabled = true;
+            }
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+
+           /* Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Workbook wb = excel.Workbooks.Add(XlSheetType.xlWorksheet);
+            Worksheet ws = (Worksheet)excel.ActiveSheet;
+
+            // Thiết lập tiêu đề cho các cột
+            for (int i = 0; i < dgvTour.Columns.Count-1 ; i++)
+            {
+                ws.Cells[1, i + 1] = dgvTour.Columns[i].HeaderText;
+            }
+
+            // Duyệt qua các dòng và cột của DataGridView và gán giá trị cho các ô tương ứng trong Excel
+            for (int i = 0; i < dgvTour.Rows.Count - 1; i++)
+            {
+                for (int j = 0; j < dgvTour.Columns.Count; j++)
+                {
+                    ws.Cells[i + 2, j + 1] = dgvTour.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            // Lưu file Excel
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Documents (.xls)|.xls";
+            sfd.FileName = "DanhSachCacBe.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                wb.SaveAs(sfd.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            }
+
+            // Giải phóng tài nguyên
+            excel.Quit();
+            wb = null;
+            excel = null;*/
         }
     }
 }
