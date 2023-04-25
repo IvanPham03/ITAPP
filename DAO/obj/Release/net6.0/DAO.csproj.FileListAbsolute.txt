@@ -1,0 +1,15 @@
+C:\Users\T\ITAPP\DAO\bin\Release\net6.0\DAO.deps.json
+C:\Users\T\ITAPP\DAO\bin\Release\net6.0\DAO.dll
+C:\Users\T\ITAPP\DAO\bin\Release\net6.0\DAO.pdb
+C:\Users\T\ITAPP\DAO\bin\Release\net6.0\DTO.dll
+C:\Users\T\ITAPP\DAO\bin\Release\net6.0\DTO.pdb
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\DAO.csproj.AssemblyReference.cache
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\DAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\DAO.AssemblyInfoInputs.cache
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\DAO.AssemblyInfo.cs
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\DAO.csproj.CoreCompileInputs.cache
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\DAO.csproj.CopyComplete
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\DAO.dll
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\refint\DAO.dll
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\DAO.pdb
+C:\Users\T\ITAPP\DAO\obj\Release\net6.0\ref\DAO.dll

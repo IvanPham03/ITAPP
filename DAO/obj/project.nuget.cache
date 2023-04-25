@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "udLUuUqUMkt2J5W2M+20DYO6NVjRTLg33nqftZID9wDSB2o8J/PdZLWXTD/pCsF8+DKZGL2kqTRn4qATC5/EUQ==",
+  "dgSpecHash": "h3cfcqt64uF2Mqx3FlND0QJSIU1Sl4icF2FpsvzNCn0dDw0+xc16fxDeecfPm4rg7mWktZ6jTIIJhq2/YbxISQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\T\\ITAPP\\DAO\\DAO.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\T\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.24.0\\microsoft.identitymodel.tokens.6.24.0.nupkg.sha512",
     "C:\\Users\\T\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\T\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\T\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512",
     "C:\\Users\\T\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\T\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\T\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",

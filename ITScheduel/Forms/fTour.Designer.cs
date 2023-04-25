@@ -98,6 +98,7 @@
             btnSchedule.Text = " Xếp lịch đấu";
             btnSchedule.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSchedule.UseVisualStyleBackColor = true;
+            btnSchedule.Click += btnSchedule_Click;
             // 
             // label4
             // 

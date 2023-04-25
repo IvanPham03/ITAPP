@@ -1,6 +1,8 @@
 ﻿using BUS;
 using DAO;
 using DTO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using Microsoft.Office.Interop.Excel;
 using Microsoft.VisualBasic;
 using System;
@@ -218,38 +220,83 @@ namespace GUI.Forms
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
 
-           /* Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Workbook wb = excel.Workbooks.Add(XlSheetType.xlWorksheet);
-            Worksheet ws = (Worksheet)excel.ActiveSheet;
-
-            // Thiết lập tiêu đề cho các cột
-            for (int i = 0; i < dgvTour.Columns.Count-1 ; i++)
+            if (dgvTour.Rows.Count > 0)
             {
-                ws.Cells[1, i + 1] = dgvTour.Columns[i].HeaderText;
-            }
-
-            // Duyệt qua các dòng và cột của DataGridView và gán giá trị cho các ô tương ứng trong Excel
-            for (int i = 0; i < dgvTour.Rows.Count - 1; i++)
-            {
-                for (int j = 0; j < dgvTour.Columns.Count; j++)
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF (*.pdf)|*.pdf";
+                save.FileName = "Envanter.pdf";
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
                 {
-                    ws.Cells[i + 2, j + 1] = dgvTour.Rows[i].Cells[j].Value.ToString();
+                    if (File.Exists(save.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+
+                            ErrorMessage = true;
+                            MessageBox.Show("Have a problem!" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            PdfPTable pTable = new PdfPTable(dgvTour.Columns.Count);
+                            pTable.DefaultCell.Padding = 2;
+                            pTable.WidthPercentage = 100;
+                            pTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn col in dgvTour.Columns)
+                            {
+                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
+                                pTable.AddCell(pCell);
+                            }
+                            foreach (DataGridViewRow viewRow in dgvTour.Rows)
+                            {
+                                foreach (DataGridViewCell dcell in viewRow.Cells)
+                                {
+                                    pTable.AddCell(dcell.Value.ToString());
+                                }
+                            }
+
+                            using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
+                            {
+                                Document document = new Document(PageSize.A4, 12f, 20f, 20f, 12f);
+                                document.Open();
+                                document.Add(pTable);
+                                document.Close();
+                                fileStream.Close();
+                            }
+                            MessageBox.Show("Success", "infor");
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Have a problem!" + ex.Message);
+                        }
+                    }
                 }
             }
-
-            // Lưu file Excel
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Excel Documents (.xls)|.xls";
-            sfd.FileName = "DanhSachCacBe.xls";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            else
             {
-                wb.SaveAs(sfd.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-            }
+                MessageBox.Show("have a problem", "Infor");
 
-            // Giải phóng tài nguyên
-            excel.Quit();
-            wb = null;
-            excel = null;*/
+            }
+        }
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            TourDTO tourDTO = new TourDTO();
+            tourDTO.TOURID = txtTourId.Text;
+           
+            MainSchedule.Instance.RoundStage(tourDTO);
+            
+
         }
     }
 }

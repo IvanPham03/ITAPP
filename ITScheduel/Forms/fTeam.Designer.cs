@@ -337,6 +337,7 @@
             btnEdit.TabIndex = 26;
             btnEdit.Text = "      Xuất";
             btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click_1;
             // 
             // btnSave
             // 

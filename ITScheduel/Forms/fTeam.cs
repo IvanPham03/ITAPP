@@ -1,5 +1,7 @@
 ﻿using BUS;
 using DTO;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -223,6 +225,78 @@ namespace GUI.Forms
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+
+            if (dgvTeam.Rows.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF (*.pdf)|*.pdf";
+                save.FileName = "Envanter.pdf";
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(save.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+
+                            ErrorMessage = true;
+                            MessageBox.Show("Diskteki Veriler Yazılamıyor!" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            PdfPTable pTable = new PdfPTable(dgvTeam.Columns.Count);
+                            pTable.DefaultCell.Padding = 2;
+                            pTable.WidthPercentage = 100;
+                            pTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn col in dgvTeam.Columns)
+                            {
+                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
+                                pTable.AddCell(pCell);
+                            }
+                            foreach (DataGridViewRow viewRow in dgvTeam.Rows)
+                            {
+                                foreach (DataGridViewCell dcell in viewRow.Cells)
+                                {
+                                    pTable.AddCell(dcell.Value.ToString());
+                                }
+                            }
+
+                            using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
+                            {
+                                Document document = new Document(PageSize.A4, 12f, 20f, 20f, 12f);
+                                document.Open();
+                                document.Add(pTable);
+                                document.Close();
+                                fileStream.Close();
+                            }
+                            MessageBox.Show("Export success!", "Infor");
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Have a problem!" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Have a problem!", "Infor");
+
+            }
         }
     }
 }
