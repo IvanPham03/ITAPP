@@ -65,7 +65,7 @@ namespace GUI.Forms
         public void LoadListTeam()
         {
             dgvTeam.DataSource = TeamBUS.Instance.LoadTeam();
-            dgvTeam.DefaultCellStyle.Font = new Font("", 12);
+            dgvTeam.DefaultCellStyle.Font = new System.Drawing.Font("", 12);
         }
 
         private void dgvTeam_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -116,7 +116,7 @@ namespace GUI.Forms
             string key = txtInputSearch.Text;
             ResetDataGridview();
             dgvTeam.DataSource = TeamBUS.Instance.SearchTeam(key);
-            dgvTeam.DefaultCellStyle.Font = new Font("", 12);
+            dgvTeam.DefaultCellStyle.Font = new System.Drawing.Font("", 12);
         }
 
         private void ResetDataGridview(object sender, EventArgs e)
